@@ -1,0 +1,1 @@
+[26-Jan-2026 07:18:27 America/Mexico_City] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.3.0". You are running 8.2.22. in /home3/aventour/logisticx.business/vendor/composer/platform_check.php on line 26

@@ -1,0 +1,174 @@
+/*-------------------------------------------------------
+53. Covarage css 
+---------------------------------------------------------*/
+
+.coverage-area {
+	// background-color: #212121;
+}
+
+.covarage-list-select {
+	.form-select {
+		border: 1px solid #EEEEEE;
+		height: 60px;
+		border-radius: 6px;
+		font-size: 15px;
+
+		&:focus {
+			box-shadow: none;
+			outline: none;
+		}
+	}
+}
+
+.country-flag {
+	width: 20px;
+}
+
+.country-title {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1;
+	color: var(--clr-heading-2);
+	margin-bottom: 0;
+}
+
+.covarage-list-up {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.covarage-box {
+	width: 200px;
+	height: 70px;
+	line-height: 70px;
+	border-radius: 6px;
+	border: 1px solid #EEEEEE;
+	text-align: center;
+	transition: all .5s ease;
+
+	&:hover {
+		background: var(--clr-def-4);
+		border: 1px solid transparent;
+
+		span {
+			color: var(--clr-heading-2);
+		}
+	}
+
+	span {
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1;
+	}
+}
+
+.coverage-area-2 {
+	background-color: var(--clr-bg-3);
+
+	.coverage-right {
+		position: relative;
+		margin-left: -75%;
+
+		.inner-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.map-circle {
+			width: 250px;
+			height: 250px;
+			border: 10px solid rgba(var(--primary-color));
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--bs-light);
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			transform: translateY(-34%);
+			right: -46px;
+			z-index: 2;
+
+			div {
+				width: 100%;
+				height: 250px;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	.coverage-left {
+		.left-icons {
+			.icon {
+				font-size: 45px;
+				color: rgba(var(--primary-color));
+				line-height: 1;
+				margin-bottom: 16px;
+			}
+
+			h5 {
+				line-height: 28px;
+				font-size: 20px;
+				font-weight: 700;
+			}
+
+			p {
+				line-height: 24px;
+			}
+		}
+	}
+
+}
+
+.google-map{
+	.map{
+		width: 100%;
+		height: 500px;
+		border-radius: 16px;
+	}
+}
+
+.covarage-list-3 {
+	.table {
+		thead {
+			th {
+				background-color: var(--table-light);
+			}
+		}
+
+		th,
+		td {
+			padding: 10px 14px;
+			vertical-align: middle;
+			color: var(--bs-body-color) !important;
+			border-color: var(--bs-table-border-color);
+		}
+
+		// tbody{
+		// 	td{
+		// 		background-color: var(--table-body);
+		// 	}
+		// }
+	}
+}
+
+body.dark-mode .coverage-area-2 .coverage-left .left-icons .icon {
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 1200px) {
+	.coverage-area-2 {
+		.coverage-right {
+			margin-left: 0;
+		}
+	}
+}

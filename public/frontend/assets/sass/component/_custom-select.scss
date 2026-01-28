@@ -1,0 +1,71 @@
+.custom-select {
+    position: relative;
+    width: 260px;
+}
+
+.select-box {
+    padding: 14px 16px;
+    line-height: 28px;
+    background: var(--white-rgb-1);
+    border: 1px solid var(--border-color-2);
+    border-radius: var(--rounded-square);
+    cursor: pointer;
+    display: block;
+    transition: border 0.3s;
+    position: relative;
+}
+.select-box span {
+    line-height: 1;
+}
+
+.select-box.active {
+    border-color: rgba(var(--primary-color));
+    // box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.select-box::after {
+    content: "\f078";
+    font-family: 'fontawesome';
+    color: var(--primary-text-color);
+    font-size: 14px;
+    // margin-left: 10px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    line-height: 26px;
+}
+
+.options {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    border: 1px solid var(--border-color-2);
+    border-radius: var(--rounded-square);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.options.show {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.options li {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.options li:hover {
+    background: rgba(var(--primary-color), 0.08);
+    color: rgba(var(--primary-color));
+}

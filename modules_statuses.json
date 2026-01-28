@@ -1,0 +1,20 @@
+{
+    "Blog": true,
+    "Faq": true,
+    "Pages": true,
+    "Section": true,
+    "Team": true,
+    "Testimonial": true,
+    "Client": true,
+    "Service": true,
+    "Features": true,
+    "Widgets": true,
+    "SocialLink": true,
+    "Leave": true,
+    "Attendance": true,
+    "HR": true,
+    "Installer": true,
+    "Language": true,
+    "Gallery": true,
+    "DeliveryArea": true
+}

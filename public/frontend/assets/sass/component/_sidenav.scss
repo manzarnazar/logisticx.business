@@ -1,0 +1,67 @@
+/*-------------------------------------------------------
+51. Benefit css 
+---------------------------------------------------------*/
+
+.sidenav {
+	height: 100vh;
+	width: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: var(--clr-white);
+	overflow-x: hidden;
+	transition: 0.5s;
+	z-index: 1050;
+	padding-top: 60px;
+	box-shadow: 0px 20.38844871520996px 61.16534423828125px -6.116534233093262px rgba(0, 0, 0, 0.04);
+	&:hover {
+		&::before {
+			opacity: 0.2;
+		}
+	}
+	&::before {
+		height: 100vh;
+		width: 100vw;
+		margin-left: 250px;
+		display: inline-block;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		content: "";
+		opacity: 0;
+		background-color: blue;
+		-webkit-transition: opacity 0.2s ease-in;
+		-moz-transition: opacity 0.2s ease-in;
+		-ms-transition: opacity 0.2s ease-in;
+		-o-transition: opacity 0.2s ease-in;
+		transition: opacity 0.2s ease-in;
+		pointer-events: none;
+	}
+	a {
+		text-align: center;
+		padding-bottom: 8px;
+		padding-top: 8px;
+		text-decoration: none;
+		font-size: 18px;
+		color: var(--clr-heading-2);
+		display: block;
+		transition: 0.3s;
+		font-weight: 400;
+		&:hover {
+			color: var(--clr-def-6);
+		}
+	}
+	.closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

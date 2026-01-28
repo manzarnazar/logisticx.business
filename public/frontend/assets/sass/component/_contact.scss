@@ -1,0 +1,146 @@
+/*-------------------------------------------------------
+23. Contact css 
+---------------------------------------------------------*/
+
+/*Google Maps*/
+
+.g-map-area {
+    height: 100%;
+}
+
+.g-map--wrapper iframe {
+    width: 100%;
+    height: 570px;
+    border: none;
+}
+
+/* ======= Contact Form ======= */
+
+.info-icon {
+    background-color: rgba(var(--primary-color));
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    background: none;
+    font-size: 20px;
+    border: none;
+    --primary-text-color: rgba(var(--primary-color));
+    color: var(--primary-text-color);
+    line-height: 30px;
+}
+
+.left-panel {
+    background-color: var(--white);
+    padding: 50px;
+    border-radius: var(--rounded-square);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        background-color: rgba(var(--white-rgb-1), 0.88);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--rounded-square);
+    }
+}
+
+.right-panel {
+    padding-right: 50px;
+    .form-label {
+        font-weight: 600;
+        line-height: 26px;
+        font-size: 16px;
+        margin-bottom: 8px;
+        --primary-text-color: var(--clr-white);
+        color: var(--primary-text-color);
+    }
+
+    .content {
+        padding: 86px 60px;
+        color: white;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        border-radius: var(--rounded-square);
+        overflow: hidden;
+
+        .form-control {
+            padding-left: 50px;
+            border-color: var(--border-color-1);
+            --primary-text-color: var(--clr-white);
+            background-color: transparent;
+        }
+
+        &:before {
+            content: "";
+            background-color: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // z-index: -1;
+        }
+
+        .form-label {
+            font-size: 18px;
+        }
+    }
+}
+
+//Responsive styles
+@media (max-width: 991px) {
+    .right-panel {
+        padding-right: 15px;
+        padding-left: 15px;
+
+        .content {
+            padding: 30px;
+        }
+    }
+
+    .left-panel {
+        background-color: #fff;
+        padding: 30px 30px 30px 30px;
+    }
+
+    .info-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .left-panel {
+        background: none !important;
+        padding: 0;
+        margin-bottom: 30px;
+        &:before{
+            display: none;
+        }
+        .heading-5 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}

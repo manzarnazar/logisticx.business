@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/deliveryarea",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\DeliveryArea\\": "",
+            "Modules\\DeliveryArea\\App\\": "app/",
+            "Modules\\DeliveryArea\\Database\\Factories\\": "database/factories/",
+            "Modules\\DeliveryArea\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\DeliveryArea\\Tests\\": "tests/"
+        }
+    }
+}

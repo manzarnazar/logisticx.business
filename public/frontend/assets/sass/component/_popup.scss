@@ -1,0 +1,164 @@
+.fixed-banner {
+    position: fixed;
+    background-color: var(--white-2);
+    border-radius: 10px;
+    z-index: 1055;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    padding: 1rem;
+    max-width: 360px; // Default size
+
+    opacity: 0;
+    transform: translateY(20px); // slight slide-in effect
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    &.show {
+        opacity: 1;
+        transform: translateY(0); // back to position
+    }
+
+    &.fade-out {
+        opacity: 0;
+        transform: translateY(20px); // slight slide out
+    }
+
+    // Positioning Modifiers
+
+    // Top
+    &--top-left {
+        top: 20px;
+        left: 20px;
+    }
+
+    &--top-center {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--top-right {
+        top: 20px;
+        right: 20px;
+    }
+
+    // Center sides
+    &--center-left {
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+    }
+
+    &--center-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &--center-right {
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+
+    // Bottom
+    &--bottom-left {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    &--bottom-center {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%) !important;
+    }
+
+    &--bottom-right {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    &--sm {
+        max-width: 280px;
+    }
+
+    &--md {
+        max-width: 360px; // same as default
+    }
+
+    &--lg {
+        max-width: 480px;
+    }
+
+    &--xl {
+        max-width: 600px;
+    }
+
+    // Optional: full width for mobile banners
+    &--full {
+        width: 100%;
+        left: 0;
+        right: 0;
+        border-radius: 0;
+    }
+
+    // Content area
+    &__content {
+        font-size: 0.95rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    // Button actions
+    &__actions {
+        display: flex;
+        gap: 0.5rem;
+
+        .btn {
+            flex: 1 1 50%;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.875rem;
+            border-radius: var(--border-radius-3);
+        }
+
+        .btn-outline-danger {
+            border-color: #dc3545;
+            color: #dc3545;
+
+            &:hover {
+                background-color: #dc3545;
+                color: #fff;
+            }
+        }
+
+        .btn-success {
+            background-color: var(--bg-primary, #198754);
+            border-color: var(--bg-primary, #198754);
+
+            &:hover {
+                background-color: var(--hover-primary, #198754);
+                border-color: var(--hover-primary, #198754);
+            }
+        }
+    }
+
+    // Responsive
+    @media (max-width: 576px) {
+        max-width: none;
+        border-radius: 8px;
+        left: 10px !important;
+        right: 10px !important;
+
+        &--top-center,
+        &--bottom-center {
+            left: 50% !important;
+            transform: translateX(-50%);
+        }
+
+        &--center-left,
+        &--center-right {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

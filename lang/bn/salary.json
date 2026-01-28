@@ -1,0 +1,32 @@
+{
+    "month": "মাস",
+    "not_enough_balance": "যথেষ্ট ব্যালেন্স নেই",
+    "user_salary_expense": "ব্যবহারকারীর বেতন ব্যয়",
+    "user_salary_income": "ব্যবহারকারীর বেতন আয়",
+    "pay_slip": "বেতনের পরিচিতি",
+    "employee_name": "কর্মচারীর নাম",
+    "department": "বিভাগ",
+    "designation": "উপাধি",
+    "joining_date": "যোগদানের তারিখ",
+    "pay_period": "বেতনের সময়কাল",
+    "basic_salary": "মৌলিক বেতন",
+    "email": "ইমেল",
+    "hub": "হাব",
+    "salary_paid": "প্রদত্ত",
+    "payroll": "বেতন হিসাব",
+    "salary_generate": "বেতন তৈরি করুন",
+    "auto_generate": "স্বয়ংক্রিয়ভাবে তৈরি করুন",
+    "salary": "বেতন",
+    "reverse_salary_pay": "বেতনের পরিশোধ প্রত্যাবর্তন",
+
+    "unpaid": "অপরিশোধিত",
+    "paid": "পরিশোধিত",
+    "partial_paid": "আংশিক পরিশোধিত",
+
+    "pickup": "পিক আপ",
+    "delivery": "ডেলিভারি",
+    "payment": "পেমেন্ট",
+    "billing_charges": "বিলিং এবং চার্জ",
+    "service": "সেবা",
+    "other": "অন্যান্য"
+}

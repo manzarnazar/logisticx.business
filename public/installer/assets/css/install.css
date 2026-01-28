@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+body{
+    background-color: #fff;
+    color: #4e5e6a;
+}
+.install-box {
+    max-width: 1100px;
+    margin: 30px auto;
+}
+table{
+    width: 100%;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #32236f;
+    background: #fff;
+}
+.section{
+    background-color: #fff;
+
+}
+.tab-content{
+    margin-top: 20px;
+}
+hr{
+    margin: 10px 0 0;
+}
+.status{
+    font-size: 20px;
+}
+.status{
+    font-size: 20px;
+}
+.status.fa-check-circle-o{
+    color: #00b393;
+}
+.status.fa-times-circle-o{
+    color: #d73b3b!important;
+}
+.tab-title{
+    background: #f2f3f4;
+    padding:15px;
+    border-bottom: none;
+}
+.tab-title.active{
+    background: #f60002;
+    color: #fff;
+}
+.form-group{
+    margin-top: 15px;
+}
+.form-control{
+    border-radius: 0;
+}
+.btn{
+    border-radius: 0;
+}
+.panel{
+    border-radius: 0;
+    border: 0;
+}
+.panel-heading h2{
+    margin-bottom: 0 !important;
+}
+.panel-install>.panel-heading{
+    background-color: #01091A;
+    color: #93a4c3;
+    border-bottom: none;
+}
+.no-padding{
+    padding: 0;
+}
+.btn-info{
+    background-color: #f60002;
+    border: none;
+    width: 100%;
+    padding: 15px;
+}
+
+.btn-info[disabled]{
+    background-color: #24BFA4 !important;
+    border: none !important;
+}
+label{
+    font-weight: normal;
+}
+.alert{
+    border-radius: 0;
+}
+.loader{
+    background: url('../assets/images/loader2.gif') no-repeat;
+    height: 16px;
+    display: inline-block;
+    padding-left: 20px;
+}
+.panel-footer{
+    border-top: none;
+}
+
+.go-to-login-page,
+
+.go-to-login-page:active,
+.go-to-login-page:focus{
+    color: #00b3a2;
+    text-decoration: none;
+}
+
+.go-to-login-page:hover{
+    color: #13B195;
+    text-decoration: none;
+}
+
+#first-td{
+    width: 87%;
+}
+
+.section .status{
+    font-size: 20px;
+}
+.section .pull-left{
+    line-height: 50px;
+}
+
+.go-to-login-page .font{
+    font-size: 100px;
+}
+
+.status.fa-times-circle-o{
+    color: #d73b3b!important;
+}

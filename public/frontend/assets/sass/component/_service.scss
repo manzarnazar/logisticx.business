@@ -1,0 +1,623 @@
+/*-------------------------------------------------------
+27. Service CSS 
+---------------------------------------------------------*/
+
+/* ======== service style one start ======== */
+
+.service-one {
+	background-color: color-mix(in oklab, var(--white-3) 60%, var(--white-2));
+
+	.container {
+		max-width: 1600px;
+	}
+
+	.shape-1 {
+		position: absolute;
+		top: -200px;
+		right: 0;
+	}
+}
+
+// .service-two{
+// 	background-color: var(--white-2);
+// }
+
+.card-logistics {
+	border: none;
+	border-radius: 0;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	transition: transform 0.2s ease-in-out;
+	position: relative;
+	overflow: hidden;
+
+	.card-body {
+		padding: 32px 40px 25px;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.card-logistics:hover {
+
+	// transform: translateY(-5px);
+	.card-thumb:before {
+		opacity: 1;
+		transition: all .3s ease;
+	}
+
+	.card-thumb img {
+		transform: scale(1.05);
+		transition: .5s ease-in;
+	}
+
+	.icon-box::before {
+		border-top-color: #1330d4;
+	}
+
+	.icon-box .icon::after {
+		top: -50%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+
+	.icon-box .icon i {
+		transform: scale(.9);
+		--clr-white: #fff;
+		color: var(--clr-white);
+	}
+
+	.icon-box .icon:hover i {
+		--clr-white: #fff;
+		color: var(--clr-white);
+	}
+
+	.icon-box .icon:hover::after {
+		top: -50%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+}
+
+.card-logistics .card-thumb {
+	position: relative;
+	width: 100%;
+	padding-top: 70%;
+	overflow: hidden;
+
+	&:before {
+		content: '';
+		background-color: rgba(0, 0, 0, 0.1);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: .3s ease-in-out;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: .5s ease-in;
+	}
+}
+
+.icon-box {
+	position: absolute;
+	bottom: -40px;
+	right: 30px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		right: -30px;
+		bottom: 0;
+		border-top: 40px solid var(--white-3);
+		border-right: 30px solid transparent;
+		-webkit-transition: all 500ms ease;
+		transition: all 500ms ease;
+	}
+
+	.icon {
+		position: relative;
+		width: 80px;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--icon-bg);
+		overflow: hidden;
+		z-index: 1;
+		margin: 0;
+
+		i {
+			position: relative;
+			display: inline-block;
+			max-width: 100%;
+			font-size: 48px;
+			color: rgba(var(--primary-color));
+			transition: all 500ms linear;
+			transition-delay: 0.1s;
+			transform: scale(1);
+		}
+
+		&::after {
+			transition-duration: 800ms;
+			position: absolute;
+			width: 200%;
+			height: 200%;
+			content: "";
+			top: 110%;
+			left: 50%;
+			background-color: rgba(var(--primary-color));
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+			border-radius: 50%;
+			z-index: -1;
+		}
+	}
+}
+
+.card-logistics .card-body h5 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 34px;
+	letter-spacing: -0.02em;
+	margin-bottom: 7px;
+
+	a {
+		font-weight: 600;
+		color: var(--primary-text-color);
+		transition: .3s;
+
+		&:hover {
+			--primary-text-color: rgba(var(--primary-color));
+			transition: .3s;
+			text-decoration: none;
+		}
+	}
+}
+
+.read-more {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 24px;
+	text-transform: uppercase;
+	letter-spacing: 0.016em;
+	color: var(--primary-text-color);
+	background-color: var(--icon-bg);
+	padding: 8px 40px 8px;
+	-webkit-transition: all 500ms ease;
+	transition: all 500ms ease;
+	z-index: 1;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(var(--primary-color));
+		transform: scaleX(0.7) rotateX(20deg);
+		opacity: 0;
+		transition: all 0.4s linear;
+		z-index: -1;
+	}
+}
+
+.read-more:hover i {
+	transform: translateX(3px);
+	transition: .3s ease;
+}
+
+.card-logistics:hover .read-more,
+.card-logistics:hover .read-more::before,
+.read-more:hover {
+	transform: scaleX(1.0) rotateX(0deg);
+	transition: all 0.4s linear;
+	opacity: 1;
+	--clr-white: #fff;
+	color: var(--clr-white);
+}
+
+.read-more:hover::before {
+	transform: scaleX(1.0) rotateX(0deg);
+	transition: all 0.4s linear;
+	opacity: 1;
+}
+
+/* =========== card logistics two start ===============*/
+
+
+/* =========== service-card-two ===============*/
+
+.service-card-two {
+	padding: 10px;
+	border: 1px solid var(--border-color-2);
+	border-right: none;
+
+	.card-thumb {
+		position: relative;
+		width: 100%;
+		padding-top: 70%;
+		overflow: hidden;
+		border-radius: var(--rounded-square);
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: .5s ease-in;
+		}
+	}
+
+	.card-body {
+		padding: 20px;
+
+		.icon {
+			font-size: 50px;
+			--primary-text-color: rgba(var(--primary-color));
+			color: var(--primary-text-color);
+			margin-bottom: 30px;
+		}
+
+		.sr-title {
+			font-size: 22px;
+			line-height: 22px;
+			margin-bottom: 20px;
+
+			a {
+				color: var(--primary-text-color);
+				font-weight: 600;
+				transition: .3s;
+				position: relative;
+
+				&:hover {
+					--primary-text-color: rgba(var(--primary-color));
+					transition: .3s;
+				}
+
+				&:hover:after {
+					// transform: scaleX(1);
+					width: 100%;
+					opacity: 1;
+					transition: .4s;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -4px;
+					left: 0;
+					width: 0;
+					height: 2px;
+					background-color: var(--primary-text-color);
+					// transform: scaleX(0);
+					// transform-origin: left;
+					transition: .4s;
+					opacity: 0;
+				}
+			}
+		}
+
+		p {
+			margin-bottom: 0;
+			line-height: 26px;
+		}
+
+		.sr-title-2 {
+			margin-top: 20px;
+			font-size: 18px;
+			margin-bottom: 0;
+
+			.text-btn {
+				color: var(--primary-text-color);
+				font-weight: 600;
+				transition: .3s;
+				position: relative;
+
+				&:hover {
+					--primary-text-color: rgba(var(--primary-color));
+					transition: .4s;
+				}
+
+				i {
+					transition: .4s;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -4px;
+					left: 0;
+					width: 0;
+					height: 2px;
+					background-color: var(--primary-text-color);
+					transition: .4s;
+					opacity: 0;
+				}
+
+				&:hover i {
+					transition: .4s;
+					transform: rotate(0);
+				}
+
+				&:hover:after {
+					width: 100%;
+					opacity: 1;
+					transition: .4s;
+				}
+			}
+		}
+	}
+
+}
+
+/* =========== service-card-two ===============*/
+
+/* ======== service detail sidebar start ========*/
+
+.service-detail-sidebar {
+	.card-body {
+		position: relative;
+		display: block;
+		padding: 33px 40px 40px;
+		background-color: var(--white-3);
+	}
+}
+
+.service-detail-list {
+	li {
+		position: relative;
+		display: block;
+
+		+li {
+			margin-top: 10px;
+		}
+
+		a {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: var(--white-2);
+			box-shadow: 0px 3px 20px 0px rgba(21, 24, 32, 0.06);
+			font-size: 16px;
+			font-weight: 600;
+			color: var(--primary-text-color);
+			padding: 12px 20px 10px;
+			-webkit-transition: all 0.4s ease;
+			transition: all 0.4s ease;
+			z-index: 1;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(var(--primary-color));
+				transition: -webkit-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+				transform-origin: bottom right;
+				-webkit-transform: scale(1, 0);
+				transform: scale(1, 0);
+				z-index: -1;
+			}
+		}
+
+		&:hover a::before {
+			-webkit-transform: scale(1, 1);
+			transform: scale(1, 1);
+			transform-origin: top center;
+		}
+
+		&:hover a {
+			color: var(--clr-white);
+		}
+
+		&.active a::before {
+			-webkit-transform: scale(1, 1);
+			transform: scale(1, 1);
+			transform-origin: top center;
+		}
+
+		&.active a {
+			color: var(--clr-white);
+		}
+	}
+}
+
+.sidebar-title {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 32px;
+	letter-spacing: -0.016em;
+	margin-bottom: 26px;
+}
+
+.need-help {
+	position: relative;
+	display: block;
+	background: var(--header1);
+	text-align: center;
+	padding: 87px 20px 95px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	z-index: 1;
+
+	.shape-1 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	.need-help-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: .10;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		z-index: -1;
+	}
+
+	.help-title {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 36px;
+		letter-spacing: -0.016em;
+		color: var(--clr-white);
+	}
+
+	.help-btn {
+		position: relative;
+		display: block;
+		margin-top: 49px;
+	}
+}
+
+.service-details-contact {
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-color: var(--white-3);
+	padding: 29px 40px 37px;
+
+	.icon {
+		position: relative;
+		display: inline-block;
+		top: 5px;
+
+		i {
+			position: relative;
+			display: inline-block;
+			font-size: 40px;
+			color: rgba(var(--primary-color));
+			transition: all 500ms linear;
+			transition-delay: 0.1s;
+			transform: scale(1);
+		}
+	}
+
+	.contact-content {
+		position: relative;
+		display: block;
+		margin-left: 25px;
+
+		>span {
+			font-size: 14px;
+			line-height: 24px;
+			color: var(--secondary-text-color);
+		}
+
+		>p {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 28px;
+			letter-spacing: -0.016em;
+			color: var(--primary-text-color);
+			margin-bottom: 0;
+		}
+
+		>p>a {
+			color: var(--primary-text-color);
+			margin-left: 4px;
+			-webkit-transition: all 500ms ease;
+			transition: all 500ms ease;
+			font-weight: 700;
+		}
+	}
+}
+
+.service-detail-img {
+	position: relative;
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 31px;
+}
+
+.service-detail-title {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 40px;
+	letter-spacing: -0.016em;
+}
+
+.services-details-text-2 {
+	margin-top: 12px;
+	margin-bottom: 42px;
+}
+
+.point-title {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 40px;
+	letter-spacing: -0.016em;
+	margin-bottom: 12px;
+}
+
+.point-list {
+	.d-icon {
+		font-size: 18px;
+		line-height: 16px;
+		font-weight: 700;
+	}
+
+	li+li {
+		margin-top: 4px;
+	}
+
+	li {
+		line-height: 30px;
+	}
+
+	li>p {
+		margin-left: 15px;
+		font-weight: 600;
+		color: var(--primary-text-color);
+	}
+}
+
+@media (max-width: 767px) {
+	.service-detail-sidebar .card-body {
+		padding: 24px;
+		padding-top: 17px;
+	}
+
+	.service-details-contact {
+		padding: 24px;
+		padding-top: 18px;
+	}
+
+	.sidebar-title {
+		margin-bottom: 16px;
+	}
+}
+
+
+/* ======== service detail sidebar Ends ========*/

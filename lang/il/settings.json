@@ -1,0 +1,37 @@
+{
+    "location": "מיקום",
+    "charges": "חיובים",
+    "save_change": "שינויים נשמרו בהצלחה",
+    "currency": "מטבע",
+    "exchange_rate": "שער חליפין",
+    "enter_exchange_rate": "הזן שער חליפין",
+    "symbol": "סמל",
+    "enter_symbol": "הזן סמל",
+    "currency_added": "המטבע נוסף בהצלחה",
+    "currency_updated": "המטבע עודכן בהצלחה",
+    "currency_deleted": "המטבע נמחק בהצלחה",
+    "parcel_tracking": "מעקב חבילה",
+
+    "added_msg": "גיבוי בסיס נתונים נוסף בהצלחה.",
+    "backup": "גיבוי",
+    "backup_description": "תמיד גבה את בסיס הנתונים לכונן שונה מאשר בסיס הנתונים בפועל. כך, אם תהיה קריסת דיסק, לא תאבד את קובץ הגיבוי יחד עם בסיס הנתונים.",
+    "database_backup": "גיבוי בסיס נתונים",
+    "download": "הורדה",
+    "error_msg": "משהו השתבש.",
+    "update_msg": "גיבוי בסיס נתונים עודכן בהצלחה.",
+
+    "sms_send_settings": "הגדרות שליחת SMS",
+    "status": "סטטוס",
+
+    "parcel_create": "יצירת חבילה",
+    "delivered_cancel_customer": "ביטול משלוח ללקוח",
+    "delivered_cancel_merchant": "ביטול משלוח לסוחר",
+
+    "gateway": "שם שער",
+    "api_key": "מפתח API",
+    "secret_key": "מפתח סודי",
+    "username": "שם משתמש",
+    "user_password": "סיסמת משתמש",
+    "api_url": "כתובת API",
+    "sms_settings": "הגדרות SMS"
+}

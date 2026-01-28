@@ -1,0 +1,69 @@
+/*-------------------------------------------------------
+53. Sidebar 2
+---------------------------------------------------------*/
+
+//Post Default
+
+.blog_ex {
+	padding: 30px;
+	border: 1px solid var(--border-color-2);
+	background: var(--white-2);
+	margin-bottom: 3rem;
+	box-shadow: 0px 4px 30px 0px #0000000F;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.blog-btn-v {
+    position: absolute;
+    left: 25px;
+    top: 51%;
+    transform: translate(0 , -50%);
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    line-height: 1;
+	color: #999999;
+}
+
+// Post
+
+.blog-post-v-single {
+	border-bottom: 1px solid var(--border-color-2);
+	margin-bottom: 24px;
+	padding-bottom: 24px;
+	&:last-child {
+		border-bottom: none;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	h6 {
+		margin-bottom: 8px;
+		transition: all .5s ease;
+		&:hover {
+			color: rgba(var(--primary-color));
+		}
+	}
+	span {
+		display: block;
+		line-height: 1;
+		color: var(--secondary-text-color);
+	}
+}
+
+.blg-detail-thumb{
+	width: 65px;
+	height: 65px;
+	border-radius: var(--rounded-square);
+	overflow: hidden;
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+// end
+
+

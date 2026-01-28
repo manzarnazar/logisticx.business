@@ -1,0 +1,92 @@
+/*-------------------------------------------------------
+01. Variable css  #f0d082
+---------------------------------------------------------*/
+
+// @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+// @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+    // main color
+    --clr-white: #fff;
+    --white: #ffffff;
+    --border-color-1: rgba(255, 255, 255, 0.2);
+    --border-color-2: rgba(0, 0, 0, 0.1);
+    --white-rgb-1: 255, 255, 255;
+    --white-2: #ffffff;
+    --white-3: #f7f7f7;
+    --gray-200: #f3f4f6;
+    --primary-color: 41, 116, 255;
+    --secondary-color: 33, 37, 41;
+    --danger-color: 202, 31, 38;
+    --clr-yellow: #f7c600;
+    --header1: #101828;
+    --black: #030712;
+    --icon-bg: #edf0f4;
+    // text color
+    --primary-text-color: #003865;
+    --secondary-text-color: #406a8c;
+
+    // primary font
+    --primary-font: "DM Sans", sans-serif;
+    --secondary-font: "Poppins", sans-serif;
+    --clr-gradient-2: linear-gradient(
+        to bottom,
+        rgb(248, 248, 255, 0.9),
+        rgba(255, 255, 255, 0.8)
+    );
+
+    // border radius
+    --rounded-pill: 50rem;
+    --rounded-square: 0.5rem;
+    --rounded-2: 0.675rem;
+    --rounded-3: 1rem;
+    --box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.059);
+
+    // new colors
+
+    .dark-mode {
+        --border-color-1: rgba(255, 255, 255, 0.2);
+        --border-color-2: rgba(255, 255, 255, 0.2);
+
+        --clr-white: #fff;
+        --white-rgb-1: 44, 44, 44;
+        --white-3: #252f3d;
+        --white-2: #1b2430;
+        --gray-200: #171c25;
+        --white: #111827;
+        --primary-text-color: #f3faff;
+        --secondary-text-color: #c2c1c1;
+        --icon-bg: #282d35;
+        --clr-gradient-2: linear-gradient(
+            to bottom,
+            rgba(35, 39, 53, 0.8),
+            rgba(27, 22, 49, 0.8)
+        );
+
+        // --box-shadow: 0px 4px 20px 0px rgba(255, 255, 255, 0.059);
+
+        --table-body: #161616;
+        --table-light: #29313a;
+        --bs-body-color: #dddddd;
+        --bs-border-color: #dee2e638;
+        --bs-white: #161616;
+        --bs-black-rgb: #ffffff;
+    }
+}
+
+body.dark-mode .text-muted{
+    color: #c2c1c1 !important;
+}
+
+.text-light-emphasis {
+    color: #bababb !important;
+}
+
+@media(min-width: 1200px) {
+    .gap-xl-30 {
+        gap: 30px !important;
+    }
+}

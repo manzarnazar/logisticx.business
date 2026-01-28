@@ -1,0 +1,756 @@
+/*-------------------------------------------------------
+44. Requ css
+---------------------------------------------------------*/
+
+.requ-delivery {
+    background-color: #1a207f;
+}
+
+.requ-contact {
+    padding: 6rem 6rem 6rem 6rem;
+    background-color: #1a207f;
+    max-width: 850px;
+
+    .heading-1 {
+        color: var(--clr-white);
+    }
+}
+
+.req-delivery-two {
+    max-width: 610px;
+}
+
+.requ-contact-pic {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+}
+
+.contact-form-requ {
+    .input-style-2 {
+        background-color: #000671;
+        border: none;
+        color: var(--clr-white);
+        margin-bottom: 2.9rem;
+
+        &::placeholder {
+            color: var(--clr-white);
+            font-size: 1.5rem;
+        }
+
+        &:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.requ-left-pic {
+    height: 100%;
+}
+
+// select.form-control.input-style-2.form-select {
+// 	color: var(--clr-white);
+// 	position: relative;
+// 	z-index: 1;
+// 	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#0D1D63' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+// 	background-repeat: no-repeat;
+// 	background-position: top 25px right 20px;
+// 	background-size: 12px;
+// }
+
+//Delivery
+
+.delivery-requ {
+    border: 2px solid var(--border-color-1);
+    box-shadow: 0px 0px 50px 0px #0000000f;
+    background-color: var(--clr-bg-4);
+    border-radius: 12px;
+
+    .contact-form-requ {
+        .input-style-2 {
+            border-radius: 6px;
+            border: 1px solid var(--border-color-2) !important;
+
+            &::placeholder {
+                color: var(--clr-white);
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .heading-5 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.input-label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--secondary-text-color);
+    margin-bottom: 15px;
+}
+
+.delivery-total.two {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(var(--primary-color));
+
+    h6 {
+        --primary-text-color: var(--clr-white);
+    }
+}
+
+.requ-contact-white {
+    .heading-1 {
+        color: var(--clr-heading);
+    }
+
+    .btn-1 {
+        width: 100%;
+    }
+
+    input[type="number"] {
+        color: var(--clr-body) !important;
+    }
+
+    .contact-form-requ {
+        .input-style-2 {
+            background-color: var(--clr-bg-4);
+            border: 1px solid var(--clr-body);
+            color: var(--clr-heading);
+            margin-bottom: 2.9rem;
+
+            &::placeholder {
+                color: var(--clr-body);
+                font-size: 1.5rem;
+            }
+
+            &:focus {
+                border: 1px solid var(--clr-body);
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        select.form-control.input-style-2.form-select {
+            color: var(--secondary-text-color);
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+        }
+
+        .sst-title {
+            color: var(--clr-body);
+        }
+
+        .styled-checkbox + label {
+            color: var(--clr-body);
+        }
+
+        .styled-checkbox + label:before {
+            border: 1px solid var(--clr-body);
+        }
+    }
+}
+
+.cal-style {
+    .input-label {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 16px;
+        // margin-bottom: 2rem;
+        color: var(--clr-white);
+    }
+
+    .input-style-2 {
+        // border-radius: 6px;
+        background: var(--clr-bg-5);
+        // height: 60px;
+        // padding-left: 2rem;
+        // border: 1px solid;
+        font-size: 16px;
+        border: 1px solid #ffffff1a;
+        color: var(--clr-white);
+        // margin-bottom: 2rem;
+
+        // &::placeholder {
+        // 	font-size: 14px;
+        // 	font-weight: 300;
+        // 	color: #999999;
+        // }
+
+        // &:focus {
+        // 	border: 1px solid #FFFFFF1A;
+        // 	outline: none;
+        // 	box-shadow: none;
+        // 	background: transparent;
+        // }
+    }
+
+    select.form-control.input-style-2.form-select {
+        position: relative;
+        z-index: 1;
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+        background-repeat: no-repeat;
+        background-position: top 20px right 20px;
+        background-size: 14px;
+        font-size: 14px;
+        font-weight: 300;
+        // color: #999999;
+    }
+}
+
+.calculator-thumb {
+    position: relative;
+    padding-top: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+.delivery-total {
+    margin-top: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+
+    h6 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        margin-bottom: 0;
+        color: var(--primary-text-color);
+    }
+}
+
+.cal-up {
+    margin-bottom: 4rem;
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #bbbbbb;
+    }
+}
+
+//Checkbox
+
+$color_1: var(--clr-white);
+$color_2: #b8b8b8;
+
+.destination {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.styled-checkbox {
+    position: absolute;
+    opacity: 0;
+
+    + {
+        label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            line-height: 18px;
+            color: $color_1;
+            font-size: 1.5rem;
+            font-weight: 400;
+
+            &:before {
+                content: "";
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+                background: transparent;
+                border: 1px solid var(--clr-white);
+            }
+        }
+    }
+
+    &:hover {
+        + {
+            label {
+                &:before {
+                    background: rgba(var(--primary-color));
+                }
+            }
+        }
+    }
+
+    &:focus {
+        + {
+            label {
+                &:before {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    &:checked {
+        + {
+            label {
+                &:before {
+                    background: rgba(var(--primary-color));
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 5px;
+                    top: 9px;
+                    background: var(--clr-white);
+                    width: 2px;
+                    height: 2px;
+                    box-shadow: 2px 0 0 var(--clr-white),
+                        4px 0 0 var(--clr-white), 4px -2px 0 var(--clr-white),
+                        4px -4px 0 var(--clr-white), 4px -6px 0 var(--clr-white),
+                        4px -8px 0 var(--clr-white);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &:disabled {
+        + {
+            label {
+                color: $color_2;
+                cursor: auto;
+
+                &:before {
+                    box-shadow: none;
+                    background: #ddd;
+                }
+            }
+        }
+    }
+}
+
+///Range Slider 2 handle
+
+.requ-input-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    label {
+        font-size: 1.5rem;
+        color: var(--clr-white);
+        display: block;
+    }
+
+    input {
+        font-size: 1.5rem;
+        color: var(--clr-white);
+        display: block;
+        background-color: transparent;
+        border: none;
+        text-align: end;
+
+        &:focus {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.requ-sldr {
+    margin-bottom: 3rem;
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+        -moz-appearance: textfield;
+        width: auto;
+        height: auto;
+        background: transparent;
+        font-size: 15px;
+        color: var(--clr-white);
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border: none;
+        }
+    }
+
+    .ui-slider {
+        &.ui-widget-content {
+            background: rgba(var(--primary-color));
+            border: none;
+        }
+
+        &.ui-slider-horizontal {
+            height: 5px;
+        }
+
+        .ui-slider-handle {
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            top: -4px;
+        }
+
+        .ui-widget-header {
+            background: rgba(var(--primary-color));
+        }
+    }
+}
+
+// new delivery calculate
+
+.calculate-right {
+    height: 750px;
+
+    .image-section {
+        height: 750px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.calculate-right form {
+    background-color: rgba(var(--primary-color));
+    padding: 100px 40px 100px 100px;
+    height: 750px;
+
+    .charge-container div:first-child {
+        max-width: 480px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .charge-container {
+        color: var(--clr-white);
+        width: 100%;
+
+        h6,
+        h2,
+        p {
+            color: var(--clr-white);
+        }
+
+        .form-select {
+            padding: 12px 14px;
+            background-color: var(--clr-body) !important;
+            border-color: var(--border-color-2) !important;
+            color: var(--primary-text-color) !important;
+            height: 50px;
+            visibility: visible;
+            font-size: 16px;
+        }
+    }
+}
+
+.illustration {
+    position: absolute;
+    bottom: -84px;
+    right: -80px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .calculate-right {
+        height: auto;
+    }
+
+    .calculate-right .image-section {
+        height: auto;
+    }
+
+    .calculate-right form {
+        padding: 40px 40px;
+        height: auto;
+    }
+}
+
+/*========== delivery calculator new ==========*/
+
+.dely-calculator {
+    background-color: var(--black);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    color: #bababb;
+    .section-title,
+    .circular-container,
+    .circular-container .heading-5 {
+        color: var(--clr-white);
+    }
+
+    .shape-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.6;
+        z-index: -1;
+    }
+
+    .shape-2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    .shape-3 {
+        position: absolute;
+        bottom: 0;
+        right: -405px;
+        z-index: -1;
+        width: 1250px;
+        /* height: 700px; */
+    }
+
+    .calculator-btn {
+        margin-top: 40px;
+
+        .btn-1 {
+            &:hover {
+                --primary-text-color: #111;
+            }
+        }
+    }
+}
+
+// progressbar
+
+.circular-container {
+    margin-top: 48px;
+
+    .circular-progress {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: conic-gradient(
+            rgba(var(--primary-color)) 320deg,
+            #ededed 0deg
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: var(--black);
+        }
+    }
+
+    .progress-value {
+        position: relative;
+        color: var(--clr-white);
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -0.04em;
+    }
+
+    .heading-5 {
+        margin-left: 25px;
+    }
+}
+
+.single-progress {
+    padding-top: 6px;
+    margin-bottom: 40px;
+
+    .progress-title {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 4px;
+        font-weight: 700;
+        color: var(--primary-text-color);
+    }
+
+    .progress {
+        border-radius: 0;
+        height: 10px;
+        overflow: visible;
+
+        .progress-bar {
+            background-color: rgba(var(--primary-color));
+            position: relative;
+            overflow: visible;
+
+            .count-text {
+                position: absolute;
+                right: -3px;
+                bottom: -4px;
+                // opacity: 0;
+                border-radius: 50%;
+                background-color: rgba(var(--primary-color));
+                border: 3px solid var(--black);
+                width: 18px;
+                height: 18px;
+                -webkit-transition: all 500ms ease;
+                -ms-transition: all 500ms ease;
+                -o-transition: all 500ms ease;
+                -moz-transition: all 500ms ease;
+                transition: all 500ms ease;
+            }
+        }
+    }
+}
+
+.right-form {
+    position: relative;
+    display: block;
+    padding: 35px 50px 44px;
+    background-color: var(--white-2);
+    box-shadow: var(--box-shadow);
+    color: var(--primary-text-color);
+    .heading-3 {
+        color: var(--primary-text-color);
+    }
+
+    .form-control,
+    .form-select {
+        margin-bottom: 20px;
+    }
+
+    .review-star-content {
+        h6 {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+.list-container {
+    margin-top: 20px;
+
+    li {
+        .list-icon {
+            font-size: 15px;
+            color: var(--clr-yellow);
+            display: inline-block;
+            font-weight: 900;
+        }
+
+        p {
+            margin-left: 15px;
+        }
+    }
+}
+
+// calculator-two
+.calculator-two {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    color: var(--clr-white);
+    background-color: var(--black);
+
+    .section-title p {
+        color: var(--clr-white);
+    }
+
+    .shape-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0.1;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .shape-2 {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        opacity: 0.8;
+        z-index: -1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .shape-3 {
+        position: absolute;
+        top: 30%;
+        width: 200px;
+        right: 20px;
+        opacity: 0.8;
+        z-index: -1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .shape-4 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        z-index: -1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .select-box {
+        background: transparent;
+        color: var(--clr-white);
+        border: 1px solid var(--border-color-1);
+    }
+
+    .select-box::after {
+        color: var(--clr-white);
+    }
+
+    .options {
+        background: var(--black);
+        border: 1px solid var(--border-color-1);
+    }
+}
+
+@media (max-width: 768px) {
+    .right-form {
+        padding: 24px;
+    }
+}

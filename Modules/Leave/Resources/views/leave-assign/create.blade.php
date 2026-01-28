@@ -1,0 +1,97 @@
+@extends('backend.partials.master')
+
+@section('title')
+{{ ___('hr_manage.leave_assign') }} {{ ___('label.create') }}
+@endsection
+
+@section('maincontent')
+<!-- wrapper  -->
+<div class="container-fluid  dashboard-content">
+    <!-- pageheader -->
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="page-header">
+                <div class="page-breadcrumb">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{route('dashboard.index')}}" class="breadcrumb-link">{{ ___('label.dashboard') }}</a></li>
+                            <li class="breadcrumb-item"><a href="" class="breadcrumb-link">{{ ___('hr_manage.leave_management') }}</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('leave.assign.index') }}" class="breadcrumb-link">{{ ___('hr_manage.leave_assign') }}</a></li>
+                            <li class="breadcrumb-item"><a href="" class="breadcrumb-link active">{{ ___('label.create') }}</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end pageheader -->
+
+    <div class="j-create-main">
+        <form action="{{ route('leave.assign.store') }}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-inputs">
+                        <div class="form-input-header">
+                            <h4 class="title-site">{{ ___('hr_manage.leave_assign') }} {{ ___('label.create') }} </h4>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group col-md-6">
+                                <label class=" label-style-1">{{ ___('label.department') }}<span class="text-danger">*</span> </label>
+                                <select class="form-control input-style-1  select2" name="department_id">
+                                    <option selected disabled> {{ ___('placeholder.select_department')}}</option>
+                                    @foreach($departments as $department)
+                                    <option value="{{$department->id}}" @selected(old('department_id')==$department->id) >{{$department->title}}</option>
+                                    @endforeach
+                                </select>
+                                @error('department_id') <small class="text-danger mt-2">{{ $message }}</small> @enderror
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class=" label-style-1">{{ ___('hr_manage.leave_type') }}<span class="text-danger">*</span> </label>
+                                <select class="form-control input-style-1  select2" name="type_id">
+                                    <option selected disabled>{{ ___('placeholder.select_leave_type')}}</option>
+                                    @foreach($types as $type)
+                                    <option value="{{$type->id}}" @selected(old('type_id')==$type->id) >{{$type->name}}</option>
+                                    @endforeach
+                                </select>
+                                @error('type_id') <small class="text-danger mt-2">{{ $message }}</small> @enderror
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <label class="label-style-1">{{ ___('hr_manage.days') }}</label>
+                                <input type="number" placeholder="{{ ___('placeholder.days') }}" class="form-control input-style-1" name="days" value="{{ old('days',0) }}">
+                                @error('days') <small class="text-danger mt-2">{{ $message }}</small> @enderror
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <label class="label-style-1">{{ ___('label.position') }}</label>
+                                <input type="number" placeholder="{{ ___('placeholder.position') }}" class="form-control input-style-1" name="position" value="{{ old('position',0) }}">
+                                @error('position') <small class="text-danger mt-2">{{ $message }}</small> @enderror
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <label class="label-style-1">{{ ___('label.status') }} <span class="text-danger">*</span></label>
+                                <select name="status" class="form-control input-style-1 select2">
+                                    <option value="{{ \App\Enums\Status::ACTIVE }}" selected>{{ ___('label.active')}} </option>
+                                    <option value="{{ \App\Enums\Status::INACTIVE }}">{{ ___('label.inactive')}} </option>
+                                </select>
+                                @error('status') <small class="text-danger mt-2">{{ $message }}</small> @enderror
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="j-create-btns">
+                <div class="drp-btns">
+                    <button type="submit" class="j-td-btn"><i class="fa-solid fa-floppy-disk"></i><span>{{ ___('label.save') }}</span></button>
+                    <a href="{{ route('leave.assign.index') }}" class="j-td-btn btn-red"> <i class="fa-solid fa-rectangle-xmark"></i><span>{{ ___('label.cancel') }}</span></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@endsection

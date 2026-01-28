@@ -1,0 +1,32 @@
+{
+    "month": "חודש",
+    "not_enough_balance": "אין מספיק איזון",
+    "user_salary_expense": "הוצאות שכר משתמש",
+    "user_salary_income": "הכנסות שכר משתמש",
+    "pay_slip": "תלוש שכר",
+    "employee_name": "שם העובד",
+    "department": "מחלקה",
+    "designation": "תפקיד",
+    "joining_date": "תאריך הצטרפות",
+    "pay_period": "תקופת תשלום",
+    "basic_salary": "שכר בסיס",
+    "email": "דוא\"ל",
+    "hub": "מרכז",
+    "salary_paid": "שולם",
+    "payroll": "משכורת",
+    "salary_generate": "צור משכורת",
+    "auto_generate": "הפקה אוטומטית",
+    "salary": "שכר",
+    "reverse_salary_pay": "ביטול תשלום שכר",
+
+    "unpaid": "לא שולם",
+    "paid": "שולם",
+    "partial_paid": "שולם חלקית",
+
+    "pickup": "איסוף",
+    "delivery": "משלוח",
+    "payment": "תשלום",
+    "billing_charges": "חיובי חשבונית",
+    "service": "שירות",
+    "other": "אחר"
+}

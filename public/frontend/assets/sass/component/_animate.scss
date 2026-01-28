@@ -1,0 +1,26 @@
+
+.float-bob-x {
+	-webkit-animation-name: float-bob-x;
+	animation-name: float-bob-x;
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+@keyframes float-bob-x {
+	0% {
+	  -webkit-transform: translateX(30px);
+	  transform: translateX(30px);
+	}
+	50% {
+	  -webkit-transform: translateX(10px);
+	  transform: translateX(10px);
+	}
+	100% {
+	  -webkit-transform: translateX(30px);
+	  transform: translateX(30px);
+	}
+}

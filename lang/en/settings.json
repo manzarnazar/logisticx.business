@@ -1,0 +1,37 @@
+{
+    "location": "Location",
+    "charges": "Charges",
+    "save_change": "Save changed successfully",
+    "currency": "Currency",
+    "exchange_rate": "Exchange rate",
+    "enter_exchange_rate": "Enter exchange rate",
+    "symbol": "Symbol",
+    "enter_symbol": "Enter symbol",
+    "currency_added": "Currency added successfully",
+    "currency_updated": "Currency updated successfully",
+    "currency_deleted": "Currency deleted successfully",
+    "parcel_tracking": "Parcel tracking",
+
+    "added_msg": "Database Backup successfully added.",
+    "backup": "Backup",
+    "backup_description": "Always back up the database to a different drive than the actual database. Then, if you get a disk crash, you will not lose your backup file along with the database.",
+    "database_backup": "Database Backup",
+    "download": "Download",
+    "error_msg": "Something went wrong.",
+    "update_msg": "Database Backup successfully update.",
+
+    "sms_send_settings": "SMS Send Settings",
+    "status": "Status",
+
+    "parcel_create": "Parcel Create",
+    "delivered_cancel_customer": "Delivered Cancel Customer",
+    "delivered_cancel_merchant": "Delivered Cancel Merchant",
+
+    "gateway": "Gateway Name",
+    "api_key": "Api Key",
+    "secret_key": "Secret Key",
+    "username": "Username",
+    "user_password": "User Password",
+    "api_url": "Api Url",
+    "sms_settings": "SMS Settings"
+}

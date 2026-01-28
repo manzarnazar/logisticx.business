@@ -1,0 +1,57 @@
+
+/*-------------------------------------------------------
+17. Blog Single css
+---------------------------------------------------------*/
+
+.blog-pp {
+	.blog-single-2 {
+		box-shadow: none;
+		.blog-desc-2 {
+			padding: 0;
+		}
+	}
+}
+
+.share-post {
+	h6 {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1;
+		color: var(--clr-heading-2);
+		margin-bottom: 2rem;
+	}
+}
+
+.share-social {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	li {
+		a  {
+			i {
+				display: inline-block;
+				text-align: center;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 6px;
+				font-size: 16px;
+				background: #eeeeee;
+				color: var(--clr-heading-2);
+				&:hover {
+					background: var(--clr-def-4);
+				}
+			}
+		}
+	}
+}
+
+.quote-tt {
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 600;
+	line-height: 30px;
+	color: var(--clr-heading-2);
+	border-left: 4px solid rgba(var(--primary-color));
+	padding-left: 1rem;
+}

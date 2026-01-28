@@ -1,0 +1,119 @@
+/*-------------------------------------------------------
+09. BTN Css  
+---------------------------------------------------------*/
+
+/*Theme Button*/
+
+.text-btn {
+	color: var(--primary-text-color);
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: 600;
+
+	i {
+		// margin-left: 10px;
+		// transform: rotate(-45deg);
+		font-size: 14px;
+		color: rgba(var(--primary-color));
+	}
+
+	&:hover {
+		--primary-text-color: rgba(var(--primary-color));
+	}
+}
+
+.btn-1,
+.btn-2 {
+	position: relative;
+	display: inline-block;
+	padding: 1.2rem 2.25rem;
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--clr-white);
+	background-color: rgba(var(--primary-color));
+	text-align: center;
+	text-transform: capitalize;
+	border: none;
+	line-height: 1;
+	border-radius: 8px;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 1;
+
+	i {
+		margin-left: 5px;
+		transform: rotate(-45deg);
+		font-size: 15px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 20px;
+		height: 20px;
+		// --primary-color: #111;
+		background-color: #111;
+		border-radius: 50%;
+		transform: translate(-50%, -50%) scale(0);
+		transition: transform 0.7s cubic-bezier(0.3, 1, 0.3, 1);
+		/* Smooth expand */
+		z-index: -1;
+	}
+
+	&:hover::before {
+		transform: translate(-50%, -50%) scale(30);
+		transition: transform 1.5s cubic-bezier(0.3, 1, 0.3, 1);
+		/* slow in */
+	}
+
+	&:hover {
+		color: var(--clr-white);
+	}
+
+	// btn two
+	&.two {
+		&:before {
+			background-color: #fff;
+			color: var(--primary-text-color);
+		}
+
+		&:hover {
+			--primary-text-color: var(--black);
+			color: var(--primary-text-color);
+		}
+	}
+}
+
+.btn-2 {
+	--primary-text-color: #111;
+	color: var(--primary-text-color);
+	background-color: var(--clr-white);
+
+	&:before {
+		background-color: #111;
+		color: var(--clr-white);
+	}
+
+	&:hover {
+		color: var(--clr-white);
+	}
+}
+
+.btn-small {
+	padding: 12px 20px;
+	line-height: 24px;
+}
+
+@media(max-width: 576px) {
+
+	.btn-1,
+	.btn-2 {
+		padding: 1rem 1.2rem;
+		font-size: 14px;
+		i{
+			font-size: 13px;
+		}
+	}
+}
