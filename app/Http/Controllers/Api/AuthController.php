@@ -169,7 +169,7 @@ class AuthController extends Controller
                 return $this->responseWithError(___('alert.invalid_credentials'), ['status_code' => 401]);
             }
 
-            if ($user->user_type != UserType::MERCHANT || $user->email_verified_at == null) {
+            if ($user->user_type != UserType::MERCHANT) {
                 Auth::logout();
                 return $this->responseWithError(___('alert.unauthorized'), ['status_code' => 400]); // Bad request
             }

@@ -35,6 +35,23 @@ class SettingsRepository implements SettingsInterface
             $ignore[] = '_token';
             $ignore[] = '_method';
 
+            // Handle checkbox fields that may not be in request when unchecked
+            $checkboxFields = ['otp_required_for_registration'];
+            foreach ($checkboxFields as $checkboxField) {
+                if (!$request->has($checkboxField)) {
+                    $settings = Setting::where('key', $checkboxField)->first();
+                    if ($settings) {
+                        $settings->value = \App\Enums\Status::INACTIVE;
+                        $settings->save();
+                    } else {
+                        $settings = new Setting();
+                        $settings->key = $checkboxField;
+                        $settings->value = \App\Enums\Status::INACTIVE;
+                        $settings->save();
+                    }
+                }
+            }
+
             foreach ($request->except($ignore) as $key => $value) {
 
                 $settings        = Setting::where('key', $key)->first();
@@ -48,6 +65,9 @@ class SettingsRepository implements SettingsInterface
                         $settings->value  = $this->upload->uploadImage($request->favicon, 'settings', [], $favicon->favicon);
                     } elseif($key == 'mail_password') {
                         $settings->value   = encrypt($value);
+                    } elseif (in_array($key, $checkboxFields)) {
+                        // Handle checkbox fields - set to ACTIVE when present
+                        $settings->value   = \App\Enums\Status::ACTIVE;
                     } else {
                         $settings->value   = $value;
                     }
@@ -62,6 +82,9 @@ class SettingsRepository implements SettingsInterface
                         $settings->value  = $this->upload->uploadImage($request->favicon, 'settings', [], '');
                     } elseif($key == 'mail_password') {
                         $settings->value   = encrypt($value);
+                    } elseif (in_array($key, $checkboxFields)) {
+                        // Handle checkbox fields - set to ACTIVE when present
+                        $settings->value   = \App\Enums\Status::ACTIVE;
                     } else {
                         $settings->value   = $value;
                     }

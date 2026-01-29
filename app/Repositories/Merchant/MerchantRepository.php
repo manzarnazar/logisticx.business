@@ -234,8 +234,6 @@ class MerchantRepository implements MerchantInterface
 
             DB::beginTransaction();
 
-            $otp                            = random_int(100000, 999999);
-
             $user                           = new User();
             $user->name                     = $request->full_name;
             $user->mobile                   = $request->mobile;
@@ -243,8 +241,9 @@ class MerchantRepository implements MerchantInterface
             $user->password                 = Hash::make($request->password);
             $user->user_type                = UserType::MERCHANT;
             $user->address                  = $request->address;
-            $user->verification_status      = Status::INACTIVE;
-            $user->otp                      = $otp;
+            $user->verification_status      = Status::ACTIVE;
+            $user->email_verified_at        = now();
+            $user->otp                      = null;
             $user->hub_id                   = $request->input('hub');
 
             $user->permissions              = [];
@@ -275,24 +274,9 @@ class MerchantRepository implements MerchantInterface
             $shop->default_shop             = true;
             $shop->save();
 
-            // $response =  app(SmsService::class)->sendOtp($user->mobile, $user->otp);
-
-            setEmailConfigurations();
-
-            Mail::to($user->email)->send(new MerchantRegistration($user));
-
             DB::commit();
 
-            $message = ___('alert.registration_otp_mail_send_message');
-            $message = str_replace("**email**",  $request->email, $message);
-
-            session([
-                'otp'               => $otp,
-                'email'             => $user->email,
-                'mobile'            => $request->mobile,
-                'password'          => $request->password,
-                'details_message'   => $message
-            ]);
+            $message = ___('alert.successfully_added');
 
             $data = [
                 'status_code'       => 201,

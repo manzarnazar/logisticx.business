@@ -99,7 +99,7 @@ class MerchantController extends Controller
         $result = $this->repo->signUpStore($request);
 
         if ($result['status']) {
-            return redirect()->route('signup.emailVerificationForm')->with('message', $result['message']);
+            return redirect()->route('signin')->with('success', $result['message']);
         }
         return back()->withInput()->with('danger', $result['message']);
     }
