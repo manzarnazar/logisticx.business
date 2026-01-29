@@ -24,7 +24,7 @@ class UserController extends Controller
 
     public function index(Request $request)
     {
-        $users = $this->repo->all(userType: [UserType::ADMIN, UserType::INCHARGE, UserType::HUB], paginate: settings('paginate_value'));
+        $users = $this->repo->all(paginate: settings('paginate_value'));
         return view('backend.user.index', compact('users'));
     }
 
