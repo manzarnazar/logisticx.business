@@ -59,10 +59,18 @@ class SettingsRepository implements SettingsInterface
                 if ($settings) {
                     if ($key == 'light_logo') {
                         $logo              = Setting::where('key', $key)->first();
-                        $settings->value  = $this->upload->uploadImage($request->light_logo, 'settings', [], $logo->logo);
+                        $oldUploadId       = $logo->value;
+                        $settings->value  = $this->upload->uploadImage($request->light_logo, 'settings', [], $oldUploadId);
+                        $settings->save();
+                        Cache::forget('logo-' . $oldUploadId);
+                        Cache::forget('logo-' . $settings->value);
                     } elseif ($key == 'favicon') {
                         $favicon           = Setting::where('key', $key)->first();
-                        $settings->value  = $this->upload->uploadImage($request->favicon, 'settings', [], $favicon->favicon);
+                        $oldUploadId       = $favicon->value;
+                        $settings->value  = $this->upload->uploadImage($request->favicon, 'settings', [], $oldUploadId);
+                        $settings->save();
+                        Cache::forget('favicon-' . $oldUploadId);
+                        Cache::forget('favicon-' . $settings->value);
                     } elseif($key == 'mail_password') {
                         $settings->value   = encrypt($value);
                     } elseif (in_array($key, $checkboxFields)) {
@@ -71,7 +79,9 @@ class SettingsRepository implements SettingsInterface
                     } else {
                         $settings->value   = $value;
                     }
-                    $settings->save();
+                    if ($key !== 'light_logo' && $key !== 'favicon') {
+                        $settings->save();
+                    }
 
                 } else {
                     $settings          = new Setting();
