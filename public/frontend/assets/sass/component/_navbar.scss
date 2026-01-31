@@ -36,16 +36,21 @@
         object-fit: contain;
         display: block;
     }
+
+    // Light theme: show only dark logo; light logo stays hidden
+    img.light-logo {
+        display: none;
+    }
 }
 
-.light-logo{
+// Dark theme: show light logo, hide dark logo
+body.dark-mode .navbar-brand .logo-display,
+body.dark-mode .offcanvas .navbar-brand .logo-display {
     display: none;
 }
-body.dark-mode .navbar-brand .logo-display {
-  display: none;
-}
-body.dark-mode .navbar-brand .light-logo {
-  display: block;
+body.dark-mode .navbar-brand .light-logo,
+body.dark-mode .offcanvas .navbar-brand .light-logo {
+    display: block;
 }
 
 

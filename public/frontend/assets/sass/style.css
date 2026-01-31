@@ -2580,16 +2580,17 @@ div[data-bg] {
   object-fit: contain;
   display: block;
 }
-
-.light-logo {
+.navbar .navbar-brand img.light-logo,
+.offcanvas .navbar-brand img.light-logo {
   display: none;
 }
 
-body.dark-mode .navbar-brand .logo-display {
+body.dark-mode .navbar-brand .logo-display,
+body.dark-mode .offcanvas .navbar-brand .logo-display {
   display: none;
 }
-
-body.dark-mode .navbar-brand .light-logo {
+body.dark-mode .navbar-brand .light-logo,
+body.dark-mode .offcanvas .navbar-brand .light-logo {
   display: block;
 }
 
