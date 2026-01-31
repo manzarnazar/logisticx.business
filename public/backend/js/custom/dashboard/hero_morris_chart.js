@@ -21,7 +21,7 @@ function weeklyCodChart() {
             { label: "Payable", value: cod.payable },
         ],
         resize: true,
-        colors: ["#0d6efd", "#0CAF60", "#FF3B3B"],
+        colors: ["#FFA500", "#0CAF60", "#FF3B3B"],
     });
 }
 
@@ -39,7 +39,7 @@ function weeklyCommissionChart() {
             { label: "Unpaid", value: commission.unpaid },
         ],
         resize: true,
-        colors: ["#0d6efd", "#0CAF60", "#FF3B3B"],
+        colors: ["#FFA500", "#0CAF60", "#FF3B3B"],
     });
 }
 

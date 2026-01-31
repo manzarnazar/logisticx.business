@@ -24,7 +24,7 @@ function weeklyCommissionChart() {
             { label: "Unpaid", value: unpaid },
         ],
         resize: true,
-        colors: ["#0d6efd", "#adb5bd", "#FF3B3B"],
+        colors: ["#FFA500", "#adb5bd", "#FF3B3B"],
     });
 }
 
@@ -47,7 +47,7 @@ function weeklyChargeDonut() {
             { label: "Unpaid", value: unpaid },
         ],
         resize: true,
-        colors: ["#0d6efd", "#0CAF60", "#FF3B3B"],
+        colors: ["#FFA500", "#0CAF60", "#FF3B3B"],
     });
 }
 
@@ -69,7 +69,7 @@ function weeklyCodDonut() {
             { label: "Merchant", value: merchant },
         ],
         resize: true,
-        colors: ["#0d6efd", "#adb5bd", "#FF3B3B"],
+        colors: ["#FFA500", "#adb5bd", "#FF3B3B"],
     });
 }
 
@@ -146,7 +146,7 @@ function parcel30DayStatus() {
                 gridLineColor: "transparent",
                 lineWidth: 3,
                 hideHover: "auto",
-                lineColors: ["#343a40", "#0d6efd", "#3f37c9", "#ced4da"],
+                lineColors: ["#343a40", "#FFA500", "#3f37c9", "#ced4da"],
                 pointStrokeColors: ["#3887BE", "#111", "#495057", "#111"],
                 resize: true,
                 parseTime: false,

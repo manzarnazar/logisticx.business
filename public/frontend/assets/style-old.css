@@ -80,7 +80,7 @@
     --clr-bg: #f3f4fc;
     --clr-def: #2b49ce;
     --clr-def-1: #2e2e2e;
-    --clr-def-2: #0d6efd;
+    --clr-def-2: #FFA500;
     --clr-def-3: #0d1d63;
     --clr-def-4: #fea412;
     --clr-def-5: #12957d;
@@ -9212,7 +9212,7 @@ h4.team-single-title::before {
 }
 
 .contact-clr-3 {
-    background: #0d6efd0f;
+    background: #FFA5000f;
 }
 
 .contact-clr-3 .contact-page-icon i {

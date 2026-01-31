@@ -698,20 +698,20 @@ li:hover>a>span {
 }
 
 .panel-heading {
-    background-color: #0d6efd;
+    background-color: #FFA500;
     color: #fff;
     padding: 20px 0;
 }
 
 .puprple_btn:hover {
-    color: #0d6efd;
-    border: 1px solid #0d6efd;
+    color: #FFA500;
+    border: 1px solid #FFA500;
     background-color: #fff;
 }
 
 .puprple_btn {
-    background-color: #0d6efd;
-    border: 1px solid #0d6efd;
+    background-color: #FFA500;
+    border: 1px solid #FFA500;
     color: #fff;
     border-radius: 50px;
     padding: 10px 40px;

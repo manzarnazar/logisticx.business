@@ -71,8 +71,9 @@
     --clr-body-3: #4e535c;
     --clr-bg: #eef3fa;
     --clr-bg-2: #eef3fa;
-    --clr-primary: #4c5bfd;
-    --clr-primary-2: #0d6efd;
+    --clr-primary: #e59400;
+    --clr-primary-2: #FFA500;
+    --primary-color: 255, 165, 0;
     --clr-white: #fff;
     --clr-black: #000;
     --clr-border: #dee5f0;
@@ -83,7 +84,7 @@
     /* --font-1: "Josefin Sans", sans-serif; */
     --primary-font: "Inter", sans-serif;
     --secondary-font: "Poppins", sans-serif;
-    --clr-rgb: 0, 102, 208;
+    --clr-rgb: 255, 165, 0;
     --clr-gradient: linear-gradient(90deg,
             rgba(var(--primary-color)) 0%,
             rgba(var(--primary-color)) 35%,
@@ -100,8 +101,8 @@
     --clr-body-3: #4e535c;
     --clr-bg: #eef3fa;
     --clr-bg-2: #eef3fa;
-    --clr-primary: #4c5bfd;
-    --clr-primary-2: #0d6efd;
+    --clr-primary: #e59400;
+    --clr-primary-2: #FFA500;
     /* --clr-white: #1b1e25; */
     --clr-black: #000;
     --clr-border: #dee5f0;
@@ -1466,7 +1467,7 @@ body.rtl-mode .price-wpr {
 
 .pag_button:hover,
 .pag_button.current {
-    background: #0d6efd0f;
+    background: #FFA5000f;
     color: var(--clr-primary-2);
 }
 
@@ -2330,7 +2331,7 @@ body.rtl-mode .price-wpr {
 
 .bullet-badge-info,
 .bullet-badge-paid {
-    background: #0d6efd0f;
+    background: #FFA5000f;
     color: var(--clr-primary-2);
 }
 

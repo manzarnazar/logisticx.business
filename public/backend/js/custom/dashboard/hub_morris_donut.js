@@ -21,7 +21,7 @@ function weeklyCodDonut() {
             { label: "Pending", value: pending },
         ],
         resize: true,
-        colors: ["#0d6efd", "#0CAF60", "#FF3B3B"],
+        colors: ["#FFA500", "#0CAF60", "#FF3B3B"],
     });
 }
 

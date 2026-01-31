@@ -23,7 +23,7 @@ function weeklyTotalCodDonut() {
             { label: "Pending", value: pending },
         ],
         resize: true,
-        colors: ["#0d6efd", "#0CAF60", "#FF3B3B"],
+        colors: ["#FFA500", "#0CAF60", "#FF3B3B"],
     });
 }
 
@@ -41,7 +41,7 @@ function weeklyTotalChargeDonut() {
             { label: "Total", value: total },
         ],
         resize: true,
-        colors: ["#0CAF60", "#FF3B3B", "#0d6efd"],
+        colors: ["#0CAF60", "#FF3B3B", "#FFA500"],
     });
 }
 
