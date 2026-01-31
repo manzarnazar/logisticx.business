@@ -68,6 +68,10 @@ if (!function_exists('logo')) {
             $logo = Cache::rememberForever($cacheKey, fn() => Upload::find($upload_id));
         }
 
+        if ($logo === null) {
+            return null;
+        }
+
         return asset($logo->{$version});
     }
 }
@@ -85,6 +89,10 @@ if (!function_exists('favicon')) {
         if ($favicon == null || !File::isFile(public_path($favicon->original))) {
             Cache::forget($cacheKey);
             $favicon = Cache::rememberForever($cacheKey, fn() => Upload::find($upload_id));
+        }
+
+        if ($favicon === null) {
+            return null;
         }
 
         return asset($favicon->original);
