@@ -23,6 +23,21 @@
     font-size: 20px;
     cursor: pointer;
 }
+// Frontend navbar logo size
+.navbar .navbar-brand,
+.offcanvas .navbar-brand {
+    display: flex;
+    align-items: center;
+
+    img {
+        max-height: 45px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+}
+
 .light-logo{
     display: none;
 }

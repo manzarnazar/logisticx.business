@@ -2566,6 +2566,21 @@ div[data-bg] {
   cursor: pointer;
 }
 
+/* Frontend navbar logo size */
+.navbar .navbar-brand,
+.offcanvas .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-brand img,
+.offcanvas .navbar-brand img {
+  max-height: 45px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .light-logo {
   display: none;
 }
