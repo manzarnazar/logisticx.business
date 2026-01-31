@@ -71,6 +71,13 @@ class SettingsRepository implements SettingsInterface
                         $settings->save();
                         Cache::forget('favicon-' . $oldUploadId);
                         Cache::forget('favicon-' . $settings->value);
+                    } elseif (in_array($key, ['dark_logo', 'app_light_logo', 'app_dark_logo'])) {
+                        $logoSetting       = Setting::where('key', $key)->first();
+                        $oldUploadId       = $logoSetting->value;
+                        $settings->value   = $this->upload->uploadImage($request->{$key}, 'settings', [], $oldUploadId);
+                        $settings->save();
+                        Cache::forget('logo-' . $oldUploadId);
+                        Cache::forget('logo-' . $settings->value);
                     } elseif($key == 'mail_password') {
                         $settings->value   = encrypt($value);
                     } elseif (in_array($key, $checkboxFields)) {
@@ -79,7 +86,7 @@ class SettingsRepository implements SettingsInterface
                     } else {
                         $settings->value   = $value;
                     }
-                    if ($key !== 'light_logo' && $key !== 'favicon') {
+                    if (!in_array($key, ['light_logo', 'favicon', 'dark_logo', 'app_light_logo', 'app_dark_logo'])) {
                         $settings->save();
                     }
 
@@ -90,6 +97,8 @@ class SettingsRepository implements SettingsInterface
                         $settings->value  = $this->upload->uploadImage($request->light_logo, 'settings', [], '');
                     } elseif ($key == 'favicon') {
                         $settings->value  = $this->upload->uploadImage($request->favicon, 'settings', [], '');
+                    } elseif (in_array($key, ['dark_logo', 'app_light_logo', 'app_dark_logo'])) {
+                        $settings->value  = $this->upload->uploadImage($request->{$key}, 'settings', [], '');
                     } elseif($key == 'mail_password') {
                         $settings->value   = encrypt($value);
                     } elseif (in_array($key, $checkboxFields)) {
