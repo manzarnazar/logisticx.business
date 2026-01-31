@@ -80,7 +80,7 @@
   --white-2: #ffffff;
   --white-3: #f7f7f7;
   --gray-200: #f3f4f6;
-  --primary-color: 41, 116, 255;
+  --primary-color: 255, 165, 0; /* #FFA500 orange */
   --secondary-color: 33, 37, 41;
   --danger-color: 202, 31, 38;
   --clr-yellow: #f7c600;

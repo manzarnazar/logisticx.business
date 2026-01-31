@@ -62,7 +62,8 @@
 	        --font-2: {!!  themeAppearance('font_family_heading') !!}; /* use heading font */
 	        --primary-text-color: {!!  themeAppearance('primary_text_color') !!}; /* use heading font */
 	        --secondary-text-color: {!!  themeAppearance('secondary_text_color') !!}; /* use heading font */
-            --clr-def-2: {!!  themeAppearance('primary_color') !!};   /* primary color */
+            --primary-color: {!! primaryColorRgb() !!};   /* primary color (RGB for rgba()) */
+            --clr-def-2: {!!  themeAppearance('primary_color') ?: '#FFA500' !!};   /* primary color (hex) */
             /* --rounded-square: 0.375rem;     ===== square =  0.375rem default, rounded = 50rem  ====== */
         }
 

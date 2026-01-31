@@ -596,3 +596,21 @@ if (!function_exists('themeAppearance')) {
         return $key ? data_get($theme, $key) : $theme;
     }
 }
+
+if (!function_exists('primaryColorRgb')) {
+    /**
+     * Get primary color as RGB string for CSS (e.g. "255, 165, 0").
+     * Uses theme appearance primary_color if set, otherwise default #FFA500.
+     */
+    function primaryColorRgb(): string
+    {
+        $hex = themeAppearance('primary_color') ?: '#FFA500';
+        $hex = ltrim($hex, '#');
+        if (strlen($hex) === 3) {
+            $hex = $hex[0].$hex[0].$hex[1].$hex[1].$hex[2].$hex[2];
+        }
+        return strlen($hex) === 6
+            ? implode(', ', [hexdec(substr($hex, 0, 2)), hexdec(substr($hex, 2, 2)), hexdec(substr($hex, 4, 2))])
+            : '255, 165, 0';
+    }
+}

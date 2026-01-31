@@ -727,7 +727,7 @@ class SectionTableSeeder extends Seeder
         Section::create([
             'type' => Type::THEME_APPEARANCE,
             'key'  => 'primary_color',
-            'value' => '#2d70d9'
+            'value' => '#FFA500'
         ]);
 
         Section::create([
